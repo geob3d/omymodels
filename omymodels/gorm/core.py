@@ -114,19 +114,17 @@ class ModelGenerator:
 ##Dev
 
 
-
-
-### Start backwards, look at the generte model then go to generate column
+### Start backwards, look at the generte model then go to generate
 
 model_gen = ModelGenerator()
-    for table in data["tables"]:
-        output += model_gen.generate_model(
-            table,
-            singular,
-            exceptions,
-            schema_global=schema_global,
-            defaults_off=defaults_off,
-        )
+for table in data["tables"]:
+    output += model_gen.generate_model(
+        table,
+        singular,
+        exceptions,
+        schema_global=schema_global,
+        defaults_off=defaults_off,
+    )
 
 
 #     model_gen.generate_attr(column=table, defaults_off=False)
